@@ -96,11 +96,11 @@ class DataProcessor:
         plt.savefig(f'{self.output_dir}/datos_2d.png', dpi=150, bbox_inches='tight')
         plt.close()
 
-    def process_all(self):
+    def process_all(self, random_state=42):
         """Ejecuta todo el pipeline de procesamiento."""
         self.load_and_clean()
         X, y = self.select_features(n_features=2)
-        self.scale_and_split(X, y)
+        self.scale_and_split(X, y, random_state=random_state)
         self.save_data()
         self.plot_data()
 

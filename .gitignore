@@ -1,2 +1,12 @@
 __pycache__/
-
+*venv/
+.env
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.pyc
+*.pyo
+*.swp
+lab2.pdf
+lab2.md
